@@ -31,8 +31,54 @@
       <p id="currentDay" class="lead"></p>
     </header>
     <div class="container">
-      <!-- Timeblocks go here -->
-    </div>
+      <ul>
+        <li class="row">
+          <article class="hour" id="9"></article>
+          <content></content>
+          <aside></aside>
+        </li>
+        <li class="row">
+          <article class="hour" id="10"></article>
+          <content></content>
+          <aside></aside>
+        </li>
+        <li class="row">
+          <article class="hour" id="11"></article>
+          <content></content>
+          <aside></aside>
+        </li>
+        <li class="row">
+          <article class="hour" id="12"></article>
+          <content></content>
+          <aside></aside>
+        </li>
+        <li class="row">
+          <article class="hour" id="1"></article>
+          <content></content>
+          <aside></aside>
+        </li>
+        <li class="row">
+          <article class="hour" id="2"></article>
+          <content></content>
+          <aside></aside>
+        </li>
+        <li class="row">
+          <article class="hour" id="3"></article>
+          <content></content>
+          <aside></aside>
+        </li>
+        <li class="row">
+          <article class="hour" id="4"></article>
+          <content></content>
+          <aside></aside>
+        </li>
+        <li class="row">
+          <article class="hour" id="5"></article>
+          <content></content>
+          <aside></aside>
+        </li>
+      </ul>
+     </div>
     
     <script type="text/javascript">
       //Create a header with the current date.
@@ -44,11 +90,30 @@
       var firstDay = $('#currentDay');
       var dayYear = moment().format('MMMM Do, YYYY');
       firstDay.text(dayYear);
+
+      var hour9 = $('#9');
+      var hour10 = $('#10');
+      var hour11 = $('#11');
+      var hour12 = $('#12');
+      var hour1 = $('#1');
+      var hour2 = $('#2');
+      var hour3 = $('#3');
+      var hour4 = $('#4');
+      var hour5 = $('#5');
       
-      
-    
-    
-    
+      hour9.text("9AM")
+      hour10.text("10AM")
+      hour11.text("11AM")
+      hour12.text("12PM")
+      hour1.text("1PM")
+      hour2.text("2PM")
+      hour3.text("3PM")
+      hour4.text("4PM")
+      hour5.text("5PM")
+
+
+
+
     </script>
     
   </body>
