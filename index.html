@@ -34,47 +34,47 @@
       <ul>
         <li class="row">
           <article class="hour" id="9"></article>
-          <input class="textarea"></input>
+          <input class="textarea" id="first"></input>
           <button class="saveBtn" id="icon"></button>
         </li>
         <li class="row">
           <article class="hour" id="10"></article>
-          <input class="textarea"></input>
+          <input class="textarea" id="second"></input>
           <button class="saveBtn" id="icon1"></button>
         </li>
         <li class="row">
           <article class="hour" id="11"></article>
-          <input class="textarea"></input>
+          <input class="textarea" id="third"></input>
           <button class="saveBtn" id="icon2"></button>
         </li>
         <li class="row">
           <article class="hour" id="12"></article>
-          <input class="textarea"></input>
+          <input class="textarea" id="fourth"></input>
           <button class="saveBtn" id="icon3"></button>
         </li>
         <li class="row">
           <article class="hour" id="1"></article>
-          <input class="textarea"></input>
+          <input class="textarea" id="fifth"></input>
           <button class="saveBtn" id="icon4"></button>
         </li>
         <li class="row">
           <article class="hour" id="2"></article>
-          <input type="text" class="textarea"></input>
+          <input class="textarea" id="sixth"></input>
           <button class="saveBtn" id="icon5"></button>
         </li>
         <li class="row">
           <article class="hour" id="3"></article>
-          <input class="textarea"></input>
+          <input class="textarea" id="seventh"></input>
           <button class="saveBtn" id="icon6"></button>
         </li>
         <li class="row">
           <article class="hour" id="4"></article>
-          <input class="textarea"></input>
+          <input class="textarea" id="eighth"></input>
           <button class="saveBtn" id="icon7"></button>
         </li>
         <li class="row">
           <article class="hour" id="5"></article>
-          <input class="textarea"></input>
+          <input class="textarea" id="ninth"></input>
           <button class="saveBtn" id="icon8"></button>
         </li>
       </ul>
@@ -88,7 +88,9 @@
       //Create a save button on each time block that saves the user input to localStorage
       
       var firstDay = $('#currentDay');
-      var dayYear = moment().format('MMMM Do, YYYY');
+      var dayYear = moment().format('LLL');
+      var date = new Date(dayYear);
+      var currentHour = date.getHours();
       firstDay.text(dayYear);
 
       var hour9 = $('#9');
@@ -120,8 +122,144 @@
       $('#icon6').text("SAVE");
       $('#icon7').text("SAVE");
       $('#icon8').text("SAVE");
+
+      var firstHour = 9;
+      var secondHour = 10;
+      var thirdHour = 11;
+      var fourthHour = 12;
+      var fifthHour = 13;
+      var sixthHour = 14;
+      var seventhHour = 15;
+      var eighthHour = 16;
+      var ninthHour = 16;
       
+      console.log(currentHour)
       
+        //First Hour Box
+
+        if (currentHour == firstHour) {
+          $('#first').addClass("present")
+        }
+
+        if (currentHour > firstHour) {
+          $('#first').addClass("past")
+        }
+
+        if (currentHour < firstHour) {
+          $('#first').addClass("future")
+        }
+      
+        //Second Hour Box
+
+        if (currentHour == secondHour) {
+          $('#second').addClass("present")
+        }
+
+        if (currentHour > secondHour) {
+          $('#second').addClass("past")
+        }
+
+        if (currentHour < secondHour) {
+          $('#second').addClass("future")
+        }
+
+        //Third Hour Box
+
+        if (currentHour == thirdHour) {
+          $('#third').addClass("present")
+        }
+
+        if (currentHour > thirdHour) {
+          $('#third').addClass("past")
+        }
+
+        if (currentHour < thirdHour) {
+          $('#third').addClass("future")
+        }
+      
+        //Fourth Hour Box
+
+        if (currentHour == fourthHour) {
+          $('#fourth').addClass("present")
+        }
+
+        if (currentHour > fourthHour) {
+          $('#fourth').addClass("past")
+        }
+
+        if (currentHour < fourthHour) {
+          $('#fourth').addClass("future")
+        }
+
+        //Fifth Hour Box
+
+        if (currentHour == fifthHour) {
+          $('#fifth').addClass("present")
+        }
+
+        if (currentHour > fifthHour) {
+          $('#fifth').addClass("past")
+        }
+
+        if (currentHour < fifthHour) {
+          $('#fifth').addClass("future")
+        }
+
+        //Sixth Hour Box
+        
+        if (currentHour == sixthHour) {
+          $('#sixth').addClass("present")
+        }
+
+        if (currentHour > sixthHour) {
+          $('#sixth').addClass("past")
+        }
+
+        if (currentHour < sixthHour) {
+          $('#sixth').addClass("future")
+        }
+
+        //Seventh Hour Box
+
+        if (currentHour == seventhHour) {
+          $('#seventh').addClass("present")
+        }
+
+        if (currentHour > seventhHour) {
+          $('#seventh').addClass("past")
+        }
+
+        if (currentHour < seventhHour) {
+          $('#seventh').addClass("future")
+        }
+
+        //Eighth Hour Box
+
+        if (currentHour == eighthHour) {
+          $('#eighth').addClass("present")
+        }
+
+        if (currentHour > eighthHour) {
+          $('#eighth').addClass("past")
+        }
+
+        if (currentHour < eighthHour) {
+          $('#eighth').addClass("future")
+        }
+
+        //Ninth Hour Box
+
+        if (currentHour == ninthHour) {
+          $('#ninth').addClass("present")
+        }
+
+        if (currentHour > ninthHour) {
+          $('#ninth').addClass("past")
+        }
+
+        if (currentHour < ninthHour) {
+          $('#ninth').addClass("future")
+        }
     </script>
     
   </body>
