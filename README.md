@@ -11,4 +11,11 @@ at the top of the page. Each input box will be color coded according to whether
 
  ## Installation
 
- * The application cannot be installed, only accessed at this link:
+ * The application cannot be installed, only accessed at this link: https://cdunahee36.github.io/Calender-App/
+
+ ## Practical Use
+
+ * The application could be used by someone who cannot keep track of a physical todo list.
+
+
+
