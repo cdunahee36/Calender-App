@@ -143,133 +143,46 @@
       var eighthHour = 16;
       var ninthHour = 17;
       
-        //First Hour Box
+        //This for loop iterates through the indexes linked to the text boxes
 
-        if (currentHour == firstHour) {
-          $('#first').addClass("present")
+        for (var i = 9; i < 18; i++) {
+          setupRow(i)
         }
-
-        if (currentHour > firstHour) {
-          $('#first').addClass("past")
-        }
-
-        if (currentHour < firstHour) {
-          $('#first').addClass("future")
-        }
-      
-        //Second Hour Box
-
-        if (currentHour == secondHour) {
-          $('#second').addClass("present")
-        }
-
-        if (currentHour > secondHour) {
-          $('#second').addClass("past")
-        }
-
-        if (currentHour < secondHour) {
-          $('#second').addClass("future")
-        }
-
-        //Third Hour Box
-
-        if (currentHour == thirdHour) {
-          $('#third').addClass("present")
-        }
-
-        if (currentHour > thirdHour) {
-          $('#third').addClass("past")
-        }
-
-        if (currentHour < thirdHour) {
-          $('#third').addClass("future")
-        }
-      
-        //Fourth Hour Box
-
-        if (currentHour == fourthHour) {
-          $('#fourth').addClass("present")
-        }
-
-        if (currentHour > fourthHour) {
-          $('#fourth').addClass("past")
-        }
-
-        if (currentHour < fourthHour) {
-          $('#fourth').addClass("future")
-        }
-
-        //Fifth Hour Box
-
-        if (currentHour == fifthHour) {
-          $('#fifth').addClass("present")
-        }
-
-        if (currentHour > fifthHour) {
-          $('#fifth').addClass("past")
-        }
-
-        if (currentHour < fifthHour) {
-          $('#fifth').addClass("future")
-        }
-
-        //Sixth Hour Box
         
-        if (currentHour == sixthHour) {
-          $('#sixth').addClass("present")
+        //This function tells the row how to display
+
+        function setupRow(rowIndex) {
+          //Returns correct element by its Id within the row
+          function getElemtId() {
+            switch (rowIndex) {
+              case firstHour: return '#first'
+              case secondHour: return '#second'
+              case thirdHour: return '#third'
+              case fourthHour: return '#fourth'
+              case fifthHour: return '#fifth'
+              case sixthHour: return '#sixth'
+              case seventhHour: return '#seventh'
+              case eighthHour: return '#eighth'
+              case ninthHour: return "#ninth"
+              default: return "#first"
+            }
         }
 
-        if (currentHour > sixthHour) {
-          $('#sixth').addClass("past")
+          //Conditional that shows whether the box is current, past, or present
+
+          if (currentHour == rowIndex) {
+            $(getElemtId()).addClass("present")
+          }
+
+          if (currentHour > rowIndex) {
+           $(getElemtId()).addClass("past")
+          }
+
+          if (currentHour < rowIndex) {
+           $(getElemtId()).addClass("future")
+          }
         }
 
-        if (currentHour < sixthHour) {
-          $('#sixth').addClass("future")
-        }
-
-        //Seventh Hour Box
-
-        if (currentHour == seventhHour) {
-          $('#seventh').addClass("present")
-        }
-
-        if (currentHour > seventhHour) {
-          $('#seventh').addClass("past")
-        }
-
-        if (currentHour < seventhHour) {
-          $('#seventh').addClass("future")
-        }
-
-        //Eighth Hour Box
-
-        if (currentHour == eighthHour) {
-          $('#eighth').addClass("present")
-        }
-
-        if (currentHour > eighthHour) {
-          $('#eighth').addClass("past")
-        }
-
-        if (currentHour < eighthHour) {
-          $('#eighth').addClass("future")
-        }
-
-        //Ninth Hour Box
-
-        if (currentHour == ninthHour) {
-          $('#ninth').addClass("present")
-        }
-
-        if (currentHour > ninthHour) {
-          $('#ninth').addClass("past")
-        }
-
-        if (currentHour < ninthHour) {
-          $('#ninth').addClass("future")
-        }
-
-        
     </script>
     
   </body>
